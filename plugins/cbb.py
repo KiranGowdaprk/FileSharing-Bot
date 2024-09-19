@@ -16,7 +16,6 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
-                        InlineKeyboardButton("⭐Updated Channel", url= "http://t.me/Pirates_Titans")
                     ]
                 ]
             )
