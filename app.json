@@ -7,7 +7,7 @@
     "sharing"
   ],
   "repository": "https://github.com/TitanXBots/FileSharing-Bot",
-  "logo": "https://ibb.co/FgPVtzw",
+  "logo": "https://ibb.co/r4LRW28",
   "env": {
     "TG_BOT_TOKEN": {
       "description": "Your Bot token, Get it from @Botfather",
