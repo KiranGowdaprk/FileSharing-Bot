@@ -1,6 +1,8 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import *
 from pyrogram.errors import *
+import os 
+from os import environ
 
 F_SUB1 = int(os.environ.get('F_SUB1', '-1002071945738'))
 F_SUB2 = int(os.environ.get('F_SUB2', '-1001972961497'))
