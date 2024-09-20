@@ -1,10 +1,12 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import *
 from pyrogram.errors import *
+import os
+from os import environ
 
-F_SUB1 = int(os.environ.get('F_SUB1', ''))
-F_SUB2 = int(os.environ.get('F_SUB2', ''))
-F_SUB3 = int(os.environ.get('F_SUB3', ''))
+F_SUB1 = int(os.environ.get('F_SUB1', '-1002071945738'))
+F_SUB2 = int(os.environ.get('F_SUB2', '-1001972961497'))
+F_SUB3 = int(os.environ.get('F_SUB3', '-1002489835580'))
 
 @Client.on_message(filters.command("joinchannels") & filters.private)
 async def join_channels(client: Client, message: Message):
@@ -38,7 +40,7 @@ async def join_channels(client: Client, message: Message):
         response += f"{channel_title} {member_statuses[channel_id]}\n"
 
     response += """
- 𝖩𝗈𝗂𝗇 @sd_bots 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾"""
+ 𝖩𝗈𝗂𝗇 @TitanXBots 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾"""
 
     if keyboard_buttons:
         keyboard = InlineKeyboardMarkup(
@@ -48,4 +50,3 @@ async def join_channels(client: Client, message: Message):
     else:
 
         await message.reply_text(response)
-
