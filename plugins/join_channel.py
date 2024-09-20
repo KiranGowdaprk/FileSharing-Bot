@@ -5,6 +5,7 @@ from pyrogram.errors import *
 F_SUB1 = int(os.environ.get('F_SUB1', ''))
 F_SUB2 = int(os.environ.get('F_SUB2', ''))
 F_SUB3 = int(os.environ.get('F_SUB3', ''))
+F_SUB4 = int(os.environ.get('F_SUB4', ''))
 
 @Client.on_message(filters.command("joinchannels") & filters.private)
 async def join_channels(client: Client, message: Message):
@@ -13,7 +14,7 @@ async def join_channels(client: Client, message: Message):
     member_statuses = {}
     keyboard_buttons = []
 
-    for channel_id in [F_SUB1, F_SUB2, F_SUB3]:
+    for channel_id in [F_SUB1, F_SUB2, F_SUB3, F_SUB4]:
         try:
             member = await client.get_chat_member(channel_id, user_id)
             if member.status == enums.ChatMemberStatus.MEMBER or enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
@@ -33,12 +34,12 @@ async def join_channels(client: Client, message: Message):
             member_statuses[channel_id] = "❌"
 
     response = "⚡️ 𝗖𝗵𝗲𝗰𝗸𝗼𝘂𝘁 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 ⚡️\n\n"
-    for channel_id in [F_SUB1, F_SUB2, F_SUB3]:
+    for channel_id in [F_SUB1, F_SUB2, F_SUB3, F_SUB4]:
         channel_title = (await client.get_chat(channel_id)).title
         response += f"{channel_title} {member_statuses[channel_id]}\n"
 
     response += """
- 𝖩𝗈𝗂𝗇 @sd_bots 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾"""
+ 𝖩𝗈𝗂𝗇 @TitanXBots 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾"""
 
     if keyboard_buttons:
         keyboard = InlineKeyboardMarkup(
