@@ -2,10 +2,10 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import *
 from pyrogram.errors import *
 
-F_SUB1 = int(os.environ.get('F_SUB1', ''))
-F_SUB2 = int(os.environ.get('F_SUB2', ''))
-F_SUB3 = int(os.environ.get('F_SUB3', ''))
-F_SUB4 = int(os.environ.get('F_SUB4', ''))
+F_SUB1 = int(os.environ.get('F_SUB1', 'https://t.me/Pirates_Titans'))
+F_SUB2 = int(os.environ.get('F_SUB2', 'https://t.me/TitanXBackup'))
+F_SUB3 = int(os.environ.get('F_SUB3', 'https://t.me/+EKqYGEQ6qUEyZjA9'))
+F_SUB4 = int(os.environ.get('F_SUB4', 'https://t.me/+cskbCke3z5I5Nzk1'))
 
 @Client.on_message(filters.command("joinchannels") & filters.private)
 async def join_channels(client: Client, message: Message):
