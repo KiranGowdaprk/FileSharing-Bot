@@ -39,7 +39,7 @@ async def join_channels(client: Client, message: Message):
         response += f"{channel_title} {member_statuses[channel_id]}\n"
 
     response += """
- 𝖩𝗈𝗂𝗇 @TitanXBots 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾"""
+ 𝖩𝗈𝗂𝗇 @sd_bots 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾"""
 
     if keyboard_buttons:
         keyboard = InlineKeyboardMarkup(
