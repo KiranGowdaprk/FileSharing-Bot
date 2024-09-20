@@ -51,5 +51,3 @@ async def join_channels(client: Client, message: Message):
     else:
 
         await message.reply_text(response)
-
-app.run()
