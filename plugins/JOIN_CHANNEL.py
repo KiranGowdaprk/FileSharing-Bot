@@ -10,7 +10,7 @@ F_SUB2 = int(os.environ.get('F_SUB2', '-1001972961497'))
 F_SUB3 = int(os.environ.get('F_SUB3', '-1002175328009'))
 F_SUB4 = int(os.environ.get('F_SUB4', '-1002038066716'))
 
-@app.on_message(filters.command("joinchannels") & filters.private)
+@Client.on_message(filters.command("joinchannels") & filters.private)
 async def join_channels(client: Client, message: Message):
     user_id = message.from_user.id
 
