@@ -6,7 +6,7 @@ from os import environ
  
 F_SUB1 = int(os.environ.get('F_SUB1', '-1002071945738')) 
 F_SUB2 = int(os.environ.get('F_SUB2', '-1001972961497')) 
-F_SUB4 = int(os.environ.get('F_SUB4', '-1002489835580')) 
+F_SUB3 = int(os.environ.get('F_SUB3', '-1002489835580')) 
  
 @Client.on_message(filters.command("joinchannels") & filters.private) 
 async def join_channels(client: Client, message: Message): 
