@@ -1,9 +1,9 @@
+import os
 from pyrogram import Client, filters, enums
 from pyrogram.types import *
 from pyrogram.errors import *
-import os
-from os import environ
 
+# Channel IDs (replace with your actual channel IDs)
 F_SUB1 = int(os.environ.get('F_SUB1', '-1002071945738'))
 F_SUB2 = int(os.environ.get('F_SUB2', '-1001972961497'))
 F_SUB3 = int(os.environ.get('F_SUB3', '-1002489835580'))
@@ -18,7 +18,9 @@ async def join_channels(client: Client, message: Message):
     for channel_id in [F_SUB1, F_SUB2, F_SUB3]:
         try:
             member = await client.get_chat_member(channel_id, user_id)
-            if member.status == enums.ChatMemberStatus.MEMBER or enums.ChatMemberStatus.ADMINISTRATOR or enums.ChatMemberStatus.OWNER:
+            if member.status in [enums.ChatMemberStatus.MEMBER, 
+                                enums.ChatMemberStatus.ADMINISTRATOR, 
+                                enums.ChatMemberStatus.OWNER]:
                 member_statuses[channel_id] = "✅"
         except UserNotParticipant:
             # Get the invite link for the channel
@@ -34,13 +36,10 @@ async def join_channels(client: Client, message: Message):
             keyboard_buttons.append(keyboard_button)
             member_statuses[channel_id] = "❌"
 
-    response = "⚡️ 𝗖𝗵𝗲𝗰𝗸𝗼𝘂𝘁 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 ⚡️\n\n"
+    response = "**Join Channels**\n\n"
     for channel_id in [F_SUB1, F_SUB2, F_SUB3]:
         channel_title = (await client.get_chat(channel_id)).title
         response += f"{channel_title} {member_statuses[channel_id]}\n"
-
-    response += """
- 𝖩𝗈𝗂𝗇 @TitanXBots 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾"""
 
     if keyboard_buttons:
         keyboard = InlineKeyboardMarkup(
@@ -48,5 +47,4 @@ async def join_channels(client: Client, message: Message):
         )
         await message.reply_text(response, reply_markup=keyboard)
     else:
-
         await message.reply_text(response)
