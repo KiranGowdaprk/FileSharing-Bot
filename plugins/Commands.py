@@ -4,6 +4,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import messages  # Example: import your message strings
 from pyrogram import enums
 from Script import script
+from bot import Bot
 
 # ... (Your existing bot logic) ...
 
