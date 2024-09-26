@@ -1,7 +1,12 @@
 ## Support   
 Join Our [Telegram Group](https://www.telegram.dog/TitanMattersSupport) For Support/Assistance And Our [Channel](https://www.telegram.dog/TitanXBots) For Updates.   
    
-Report Bugs, Give Feature Requests There..   
+Report Bugs, Give Feature Requests There..
+
+##
+
+**Make sure to see [contributing.md](https://github.com/TitanXBots/FileSharing-Bot/blob/main/CONTRIBUTING.md) for instructions on contributing to the project!**
+
 
 #### Deploy on Koyeb
 
