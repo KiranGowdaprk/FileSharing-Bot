@@ -4,7 +4,6 @@ Join Our [Telegram Group](https://www.telegram.dog/TitanMattersSupport) For Supp
 Report Bugs, Give Feature Requests There..
 
 ##
-
 **Make sure to see [contributing.md](https://github.com/TitanXBots/FileSharing-Bot/blob/main/CONTRIBUTING.md) for instructions on contributing to the project!**
 
 
