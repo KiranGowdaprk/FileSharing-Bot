@@ -10,13 +10,13 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>✯ Creator : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n✯ Language : <code>Python3</code>\n✯ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n✯ Source Code : <a href='https://github.com/TitanXBots/FileStore-Bot'>Click here</a>\n✯ Channel : @TitanXBots\n✯ Support Group : @TitanMattersSupport</b>",
+            text=ABOUT_TXT.format(first=query.from_user.first_name),
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data = "close"),
-                    InlineKeyboardButton('🍁 ᴘʀᴇᴍɪᴜᴍ', url='https://t.me/TitanXBackup/33')
+                    InlineKeyboardButton("⚓ ʜᴏᴍᴇ", callback_data = "start"),
+                    InlineKeyboardButton("⚡ ᴄʟᴏꜱᴇ", callback_data = "close")
                     ]
                 ]
             )
@@ -28,8 +28,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton("🔰 ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton("⚡ ᴄʟᴏsᴇ", callback_data = "close")
+                    InlineKeyboardButton("🧠 ʜᴇʟᴘ", callback_data = "help"),
+                    InlineKeyboardButton("🔰 ᴀʙᴏᴜᴛ", callback_data = "about")
                     ]
                 ]
             )
