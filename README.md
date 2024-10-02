@@ -16,7 +16,7 @@ I Guess This Will Be Usefull For Many People.....😇.
 - Fully customisable.
 - Customisable welcome & Forcesub messages.
 - More than one Posts in One Link.
-- Four ForceSub Channels.
+- 4 ForceSub Channels.
 
 ### Setup
 
