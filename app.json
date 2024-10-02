@@ -6,7 +6,7 @@
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/TitanXBots/FileStore",
+  "repository": "https://github.com/TitanXBots/FileSharing-Bot",
   "logo": "https://envs.sh/SP_.jpg",
   "env": {
     "TG_BOT_TOKEN": {
