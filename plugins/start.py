@@ -143,7 +143,7 @@ async def not_joined(client: Client, message: Message):
     except IndexError:
         pass
 
-    await message.reply(
+    await message.reply_photo(
      photo = FORCE_PIC
      caption = FORCE_MSG.format(
                 first = message.from_user.first_name,
