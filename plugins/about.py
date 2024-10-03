@@ -78,10 +78,14 @@ async def start_command(client: Client, message: Message):
                 pass
         return
     else:
-        reply_markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton("ʜᴇʟᴘ", callback_data='help'),
-             InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data='about')]
-        ])
+        reply_markup = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("🧠 ʜᴇʟᴘ", callback_data = "help"),
+                    InlineKeyboardButton("🔰 ᴀʙᴏᴜᴛ", callback_data = "about")
+                ]
+            ]
+        )
         await message.reply_photo(
             photo= START_PIC,
             caption= START_MSG.format(
@@ -106,21 +110,25 @@ REPLY_ERROR = "<code>Use this command as a reply to any telegram message without
 #=====================================================================================##
 
     
-    
+
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink2),
+            InlineKeyboardButton(text="✵ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ✵", url=client.invitelink2),
+        ],
+        [
+            InlineKeyboardButton(text="✵ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink3),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ✵", url=client.invitelink4),
         ]
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text='• ᴛʀʏ ᴀɢᴀɪɴ •',
-                    url=f"https://t.me/{client.username}?start={message.command[1]}"
+                    text = '☢ ɴᴏᴡ ᴄʟɪᴄᴋ ʜᴇʀᴇ •',
+                    url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
         )
