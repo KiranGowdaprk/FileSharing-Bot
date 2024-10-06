@@ -1,4 +1,4 @@
-#TitanXBots
+e#TitanXBots
 
 
 
@@ -22,7 +22,7 @@ API_HASH = os.environ.get("API_HASH", "9e93c3305814f31695145026944fe9e1")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001684649237"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "6676821961 1172983198"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "1172983198"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
@@ -72,7 +72,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "👋Hey Friend, 🚫Don't send any messages to me directly I'm only File Share bot!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(5356695781)
+ADMINS.append(6676821961)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
